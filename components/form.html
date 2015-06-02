@@ -1,0 +1,24 @@
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+
+<dom-module id="jug-form">
+    <template>
+        <paper-input label="Input label" value="{{name::input}}"></paper-input>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+                is: 'jug-form',
+                properties: {
+                    name: {
+                        type: String,
+                        value: "test"
+                    },
+
+                }
+
+            }
+    );
+
+
+</script>

@@ -1,0 +1,76 @@
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<link rel="import" href="avatar.html">
+
+
+<dom-module id="jug-login">
+    <style>
+        .component-wrapper {
+            background-color: lightgrey;
+            border-color: darkgrey;
+            border-width: 2px;
+            border-radius: 6px;
+            border-style: solid;
+            padding: 12px;
+            font-family: Roboto;
+            max-width: 240px;
+        }
+        .avatar {
+            width: 50%;
+            margin: 0 auto;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+        .input-div {
+            padding-left: 24px;
+            padding-right: 24px;
+            min-width: 100%;
+            width: 100%;
+            max-width: 100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .input-field {
+            min-width: 32px;
+            width: 80%;
+            max-width: 200px;
+        }
+        .login-button {
+            min-width: 32px;
+            width: 80%;
+            max-width: 200px;
+        }
+    </style>
+    <template>
+        <div class="component-wrapper">
+            <div class="avatar">
+                <jug-avatar image="{{image}}"></jug-avatar>
+            </div>
+            <div class="input-div"><input class="input-field" value="{{name::input}}"></div>
+            <div class="input-div"><input class="input-field" value="{{password::input}}"></div>
+            <div class="input-div"><button class="login-button">Login</button></div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'jug-login',
+        properties: {
+            name: {
+                type: String,
+                notify: true,
+                value: "unknown"
+            },
+            password: {
+                type: String,
+                notify: true
+            },
+            image: {
+                type: String,
+                notify: true,
+                value: "user-02.jpg"
+            }
+        }
+    });
+</script>

@@ -1,22 +1,17 @@
-<link rel="import"
-      href="../bower_components/polymer/polymer.html">
-
-
 <dom-module id="hello-span">
-    <style>
-    </style>
     <template>
-        <span>Hello {{name}}!</span> <!-- data bindings in local DOM -->
+        Hello <span>{{first}}</span>!<br>
+        <input value="{{first::input}}">
     </template>
 </dom-module>
 
 <script>
     Polymer({
-        is: "hello-span",
+        is: 'hello-span',
         properties: {
-            name: {
+            first: {
                 type: String,
-                value: "unknown"
+                notify: true
             }
         }
     });

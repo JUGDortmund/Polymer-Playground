@@ -1,23 +1,15 @@
 <dom-module id="hello-span">
     <style>
-        /* CSS rules for your element */
     </style>
     <template>
-        <!-- local DOM for your element -->
-
         <span>Hello {{name}}!</span> <!-- data bindings in local DOM -->
     </template>
 </dom-module>
 
 <script>
-    // element registration
     Polymer({
         is: "hello-span",
-
-        // add properties and methods on the element's prototype
-
         properties: {
-            // declare properties for the element's public API
             name: {
                 type: String,
                 value: "unknown"

@@ -3,10 +3,9 @@
 
 
 <dom-module id="hello-span">
-    <style>
-    </style>
+
     <template>
-        <span>Hello {{name}}!</span> <!-- data bindings in local DOM -->
+        Hello <span>{{name}}</span>!
     </template>
 </dom-module>
 
@@ -14,10 +13,7 @@
     Polymer({
         is: "hello-span",
         properties: {
-            name: {
-                type: String,
-                value: "unknown"
-            }
+            name: String
         }
     });
 </script>

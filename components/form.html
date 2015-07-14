@@ -7,7 +7,12 @@
         	<input is="iron-input" maxlength="50" value="{{validateCharNo::input}}">
   			<paper-input-char-counter></paper-input-char-counter>
 		</paper-input-container>
-
+    	<gold-email-input label="*Your email address" auto-validate required error-message="Please insert valid email."></gold-email-input>
+		</br>
+		<p>
+		<paper-button raisedButton onclick="document.querySelector('#toast1').show()">Click me for a notification!</paper-button>
+		<paper-toast id="toast1" visible = true duration="5000" text="Yeah, this is a notification. And I'll be around for 5 seconds."></paper-toast>
+   		</p>
     </template>
 </dom-module>
 
@@ -28,6 +33,4 @@
 
             }
     );
-
-
 </script>

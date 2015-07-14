@@ -3,6 +3,11 @@
 <dom-module id="jug-form">
     <template>
         <paper-input label="Input label" value="{{name::input}}"></paper-input>
+        <paper-input-container>
+        	<input is="iron-input" maxlength="50" value="{{validateCharNo::input}}">
+  			<paper-input-char-counter></paper-input-char-counter>
+		</paper-input-container>
+
     </template>
 </dom-module>
 
@@ -13,6 +18,10 @@
                     name: {
                         type: String,
                         value: "test"
+                    },
+                    validateCharNo: {
+                        type: String,
+                        value: "Only 50 chars allowed"
                     },
 
                 }
